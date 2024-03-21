@@ -172,7 +172,10 @@
     <Footer v-if="!userStore.isLoading" />
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { useUserStore } from '../stores/user';
+const userStore = useUserStore();
+
 let isAccountMenu = ref(false);
 let isCartHover = ref(false);
 let isSearching = ref(false);

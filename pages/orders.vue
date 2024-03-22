@@ -20,13 +20,13 @@
                         <div class="pt-2"></div>
 
                         <div v-for="item in order.orderItem">
-                            <NuxtLink
+                            <nuxt-link
                                 class="flex items-center gap-3 p-1 hover:underline hover:text-blue-500"
                                 :to="`/item/${item.productId}`"
                             >
                                 <img width="40" :src="item.product.url" />
                                 {{ item.product.title }}
-                            </NuxtLink>
+                            </nuxt-link>
                         </div>
 
                         <div class="pt-2 pb-5">

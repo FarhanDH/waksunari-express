@@ -11,12 +11,12 @@
                     <div class="text-xl text-center mt-4">Belum ada item?</div>
 
                     <div v-if="!user" class="flex text-center">
-                        <NuxtLink
+                        <nuxt-link
                             to="/auth"
                             class="bg-[#FD374F] w-full text-white text-[21px] font-semibold p-1.5 rounded-full mt-4"
                         >
                             Sign in
-                        </NuxtLink>
+                        </nuxt-link>
                     </div>
                 </div>
             </div>

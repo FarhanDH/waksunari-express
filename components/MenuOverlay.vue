@@ -4,9 +4,9 @@
         class="fixed z-50 bottom-0 h-full w-full bg-white px-3"
     >
         <div class="flex items-center justify-between py-5">
-            <NuxtLink to="/" @click="userStore.isMenuOverlay = false">
+            <nuxt-link to="/" @click="userStore.isMenuOverlay = false">
                 <img width="170" src="/food-extreme.png" />
-            </NuxtLink>
+            </nuxt-link>
 
             <button
                 @click="userStore.isMenuOverlay = false"

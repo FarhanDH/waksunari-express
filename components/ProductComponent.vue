@@ -3,7 +3,7 @@
         :id="`ProductComponent${product.id}`"
         class="bg-white inline-block rounded hover:shadow-[0_0_10px_3px_rgba(0,0,0,0.15)] cursor-pointer"
     >
-        <NuxtLink :to="`/item/${product.id}`">
+        <nuxt-link :to="`/item/${product.id}`">
             <img class="rounded-t" :src="product.url" />
 
             <div id="ProductDetails">
@@ -53,7 +53,7 @@
                     >
                 </p>
             </div>
-        </NuxtLink>
+        </nuxt-link>
     </div>
 </template>
 

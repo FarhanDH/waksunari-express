@@ -5,21 +5,21 @@
                 <div class="md:w-[65%]">
                     <div class="bg-white rounded-lg p-4">
                         <div class="text-xl font-semibold mb-2">
-                            Shipping Address
+                            Alamat Pengirmiman
                         </div>
 
                         <div v-if="currentAddress && currentAddress.data">
-                            <NuxtLink
+                            <nuxt-link
                                 to="/address"
                                 class="flex items-center pb-2 text-blue-500 hover:text-red-400"
                             >
                                 <Icon name="mdi:plus" size="18" class="mr-2" />
-                                Update Address
-                            </NuxtLink>
+                                Ubah Address
+                            </nuxt-link>
 
                             <div class="pt-2 border-t">
                                 <div class="underline pb-1">
-                                    Delivery Address
+                                    Alamat Pengirmian
                                 </div>
                                 <ul class="text-xs">
                                     <li class="flex items-center gap-2">
@@ -29,25 +29,25 @@
                                         </div>
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <div>Address:</div>
+                                        <div>Alamat:</div>
                                         <div class="font-bold">
                                             {{ currentAddress.data.address }}
                                         </div>
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <div>Zip Code:</div>
+                                        <div>Kode Post:</div>
                                         <div class="font-bold">
                                             {{ currentAddress.data.zipcode }}
                                         </div>
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <div>City:</div>
+                                        <div>Kota:</div>
                                         <div class="font-bold">
                                             {{ currentAddress.data.city }}
                                         </div>
                                     </li>
                                     <li class="flex items-center gap-2">
-                                        <div>Country:</div>
+                                        <div>Negara:</div>
                                         <div class="font-bold">
                                             {{ currentAddress.data.country }}
                                         </div>
@@ -56,14 +56,14 @@
                             </div>
                         </div>
 
-                        <NuxtLink
+                        <nuxt-link
                             v-else
                             to="/address"
                             class="flex items-center text-blue-500 hover:text-red-400"
                         >
                             <Icon name="mdi:plus" size="18" class="mr-2" />
-                            Add New Address
-                        </NuxtLink>
+                            Tambah Alamant Baru
+                        </nuxt-link>
                     </div>
 
                     <div id="Items" class="bg-white rounded-lg p-4 mt-4">
@@ -79,8 +79,8 @@
                         <div class="text-2xl font-extrabold mb-2">Summary</div>
 
                         <div class="flex items-center justify-between my-4">
-                            <div class="">Total Shipping</div>
-                            <div class="">Free</div>
+                            <div class="">Total Pengiriman</div>
+                            <div class="">Gratis</div>
                         </div>
 
                         <div class="border-t" />
@@ -88,7 +88,7 @@
                         <div class="flex items-center justify-between my-4">
                             <div class="font-semibold">Total</div>
                             <div class="text-2xl font-semibold">
-                                $
+                                Rp
                                 <span class="font-extrabold">{{
                                     total / 100
                                 }}</span>
@@ -126,10 +126,11 @@
 
                     <div class="bg-white rounded-lg p-4 mt-4">
                         <div class="text-lg font-semibold mb-2 mt-2">
-                            AliExpress
+                            WakSunariExpress
                         </div>
                         <p class="my-2">
-                            AliExpress keeps your information and payment safe
+                            WakSunariExpress menjaga keaamnan informasi dan
+                            pembayaran
                         </p>
                     </div>
                 </div>
@@ -145,7 +146,7 @@ const userStore = useUserStore();
 const user = useSupabaseUser();
 const route = useRoute();
 
-definePageMeta({ middleware: 'auth' });
+// definePageMeta({ middleware: 'auth' });
 
 let stripe = null;
 let elements = null;

@@ -82,7 +82,7 @@
 </template>
 
 <script setup>
-import MainLayout from '../layouts/MainLayout.vue';
+import MainLayout from '../layouts/MainLayouts.vue';
 import { useUserStore } from '../stores/user';
 const userStore = useUserStore();
 const user = useSupabaseUser();
@@ -116,6 +116,11 @@ watchEffect(async () => {
     userStore.isLoading = false;
 });
 
+/**
+ * Function to submit form data, validate input fields, and make API calls for updating or adding an address.
+ *
+ * @return {Promise<void>} Promise that resolves once the submission process is complete.
+ */
 const submit = async () => {
     isWorking.value = true;
     error.value = null;

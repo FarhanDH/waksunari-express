@@ -81,8 +81,8 @@ let isSelected = ref(false);
  * @return {type} description of return value
  */
 const removeFromCart = () => {
-    userStore.cart.forEach((prod, index) => {
-        if (prod.id === product.value.id) {
+    userStore.cart.forEach((prod: any, index) => {
+        if (prod.id === product?.value.id) {
             userStore.cart.splice(index, 1);
         }
     });
@@ -96,7 +96,7 @@ const removeFromCart = () => {
 watch(
     () => isSelected.value,
     (val) => {
-        emit('selectedRadio', { id: product.value.id, val: val });
+        emit('selectedRadio', { id: product?.value.id, val: val });
     },
 );
 </script>

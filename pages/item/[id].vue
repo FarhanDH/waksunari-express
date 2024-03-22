@@ -98,7 +98,7 @@
 
 <script setup>
 import MainLayout from '../../layouts/MainLayouts.vue';
-import { useUserStore } from '~/stores/user';
+import { useUserStore } from '../../stores/user';
 const userStore = useUserStore();
 
 const route = useRoute();

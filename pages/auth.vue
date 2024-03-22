@@ -34,21 +34,12 @@
 const client = useSupabaseClient();
 const user = useSupabaseUser();
 
-/**
- * If the user is already logged in, redirect to the home page.
- */
 watchEffect(() => {
     if (user.value) {
         return navigateTo('/');
     }
 });
 
-/**
- * Perform a login using OAuth with the specified provider.
- *
- * @param {string} prov - The OAuth provider to use for login.
- * @return {Promise} An object containing the login data or an error.
- */
 const login = async (prov) => {
     const { data, error } = await client.auth.signInWithOAuth({
         provider: prov,
